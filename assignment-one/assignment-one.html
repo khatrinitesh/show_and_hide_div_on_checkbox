@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repository</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	
+	<p>
+		<input type="checkbox" id='mycheck' class='mycheck'> Do you have passport?
+	</p>
+
+	<hr>
+
+	<div class="new_password" style="display:block;">
+		<p>Add New Password</p>
+	</div>
+
+	<div class="passport_num" style="display:none;">
+		<p>
+			Passport Number: <input type="password">
+		</p>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script type='text/javascript'>
+ 		$(document).ready(function(){
+			$(".mycheck").on("click",function(){
+				if($(this).is(":checked"))
+				{
+					$(".passport_num").show();
+					$(".new_password").hide();
+				}
+				else{
+					$(".new_password").show();
+					$(".passport_num").hide();
+				}
+			});
+		});
+
+ 	</script>
+
+</body>
+</html>
